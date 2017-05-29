@@ -20,3 +20,6 @@ CEGUI MYGUI
 
 äÖÈ¾ÒıÇæ
 ogre
+
+»Øµ÷
+fastdelegate
