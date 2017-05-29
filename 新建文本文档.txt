@@ -1,0 +1,22 @@
+脚本系统
+lua luaplus 
+python
+
+寻路系统
+Nav导航网格寻路
+
+配置文件
+.xml tinyxml
+ini
+
+数据库
+mysql
+
+字体
+freetype
+
+UI系统
+CEGUI MYGUI
+
+渲染引擎
+ogre

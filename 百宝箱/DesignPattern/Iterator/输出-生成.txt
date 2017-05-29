@@ -1,0 +1,19 @@
+1>------ 已启动全部重新生成: 项目: Iterator, 配置: Debug Win32 ------
+1>正在删除项目“Iterator”(配置“Debug|Win32”)的中间文件和输出文件
+1>正在编译...
+1>Aggregate.cpp
+1>c:\users\worldend\desktop\game\designpattern\iterator\iterator\component.h(35) : error C2059: 语法错误 : “{”
+1>Component.cpp
+1>c:\users\worldend\desktop\game\designpattern\iterator\iterator\component.h(35) : error C2059: 语法错误 : “{”
+1>Iterator.cpp
+1>main.cpp
+1>c:\users\worldend\desktop\game\designpattern\iterator\iterator\component.h(35) : error C2059: 语法错误 : “{”
+1>c:\users\worldend\desktop\game\designpattern\iterator\iterator\main.cpp(71) : error C2512: “Composite”: 没有合适的默认构造函数可用
+1>c:\users\worldend\desktop\game\designpattern\iterator\iterator\main.cpp(72) : error C2512: “Composite”: 没有合适的默认构造函数可用
+1>c:\users\worldend\desktop\game\designpattern\iterator\iterator\main.cpp(73) : error C2512: “Composite”: 没有合适的默认构造函数可用
+1>c:\users\worldend\desktop\game\designpattern\iterator\iterator\main.cpp(74) : error C2512: “Composite”: 没有合适的默认构造函数可用
+1>c:\users\worldend\desktop\game\designpattern\iterator\iterator\main.cpp(75) : error C2512: “Composite”: 没有合适的默认构造函数可用
+1>正在生成代码...
+1>生成日志保存在“file://c:\Users\worldend\Desktop\Game\DesignPattern\Iterator\Iterator\Debug\BuildLog.htm”
+1>Iterator - 8 个错误，0 个警告
+========== 全部重新生成: 成功 0 个，失败 1 个，跳过 0 个 ==========

@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Observer", "Observer\Observer.vcproj", "{564B20A4-D140-41FF-8358-D7911D5C6EAB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{564B20A4-D140-41FF-8358-D7911D5C6EAB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{564B20A4-D140-41FF-8358-D7911D5C6EAB}.Debug|Win32.Build.0 = Debug|Win32
+		{564B20A4-D140-41FF-8358-D7911D5C6EAB}.Release|Win32.ActiveCfg = Release|Win32
+		{564B20A4-D140-41FF-8358-D7911D5C6EAB}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
