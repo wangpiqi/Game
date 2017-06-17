@@ -165,6 +165,22 @@
 	<References>
 	</References>
 	<Files>
+		<File
+			RelativePath=".\test.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\Variant.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\Variant.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Variant_Define.h"
+			>
+		</File>
 	</Files>
 	<Globals>
 	</Globals>
