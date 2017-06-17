@@ -14,6 +14,9 @@
 
 #pragma once
 
+#include <string>
+using namespace std;
+
 #include <Windows.h>
 
 union VDATA
@@ -25,6 +28,7 @@ union VDATA
 	float floatValue; //VTYPE_FLOAT
 	double doubleValue; //VTYPE_DOUBLE
 	void* pointValue; //VTYPE_POINT
+	const char* stringValue; //VTYPE_STRING
 };
 
 enum VTYPE
@@ -38,6 +42,7 @@ enum VTYPE
 	VTYPE_FLOAT,
 	VTYPE_DOUBLE,
 	VTYPE_POINT,
+	VTYPE_STRING,
 
 	VTYPE_MAX,
 };
