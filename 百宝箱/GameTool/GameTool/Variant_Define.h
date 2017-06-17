@@ -18,13 +18,13 @@
 
 union VDATA
 {
-	char charVal; //VTYPE_CHAR
-	short shortVal; //VTYPE_SHORT
-	int intVal; //VTYPE_INT
-	INT64 int64Val; //VTYPE_INT64
-	float floatVal; //VTYPE_FLOAT
-	double doubleVal; //VTYPE_DOUBLE
-	void* pointVal; //VTYPE_POINT
+	char charValue; //VTYPE_CHAR
+	short shortValue; //VTYPE_SHORT
+	int intValue; //VTYPE_INT
+	INT64 int64Value; //VTYPE_INT64
+	float floatValue; //VTYPE_FLOAT
+	double doubleValue; //VTYPE_DOUBLE
+	void* pointValue; //VTYPE_POINT
 };
 
 enum VTYPE

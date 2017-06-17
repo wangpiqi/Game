@@ -21,7 +21,7 @@ struct Variant
 	VDATA vdata; //数据
 	VTYPE vt; //数据类型
 
-	inline int IntVal() const { return vdata.intVal; };
+	inline int IntVal() const { return vdata.intValue; };
 };
 
 #endif

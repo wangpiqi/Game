@@ -170,15 +170,19 @@
 			>
 		</File>
 		<File
-			RelativePath=".\Variant.cpp"
-			>
-		</File>
-		<File
 			RelativePath=".\Variant.h"
 			>
 		</File>
 		<File
 			RelativePath=".\Variant_Define.h"
+			>
+		</File>
+		<File
+			RelativePath=".\VarList.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\VarList.h"
 			>
 		</File>
 	</Files>

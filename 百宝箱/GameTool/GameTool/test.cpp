@@ -17,7 +17,7 @@ using namespace std;
 int main()
 {
 	Variant v;
-	v.vdata.intVal = 1;
+	v.vdata.intValue = 1;
 	v.vt = VTYPE_INT;
 
 	cout<<v.IntVal()<<endl;
