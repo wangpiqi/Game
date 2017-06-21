@@ -14,11 +14,39 @@
 
 #pragma once
 
+#include "Variant.h"
+
 class VarList
 {
 public:
 	VarList(void);
 	~VarList(void);
+
+	VarList& operator << (int nValue)
+	{
+		if (m_nDataUsed >= m_nDataSize)
+		{
+			ExpandMemory();
+		}
+
+		m_pData[m_nDataUsed].vdata.intValue = nValue;
+		++m_nDataUsed;
+
+		return *this;
+	};
+
+	inline int IntVal(int nIndex) const 
+	{
+		return m_pData[nIndex].vdata.intValue; 
+	};
+
+private:
+	void ExpandMemory();
+
+private:
+	Variant* m_pData;
+	int m_nDataSize; //数据总大小
+	int m_nDataUsed; //已经使用的数据大小
 };
 
 #endif

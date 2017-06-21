@@ -13,8 +13,22 @@
 
 VarList::VarList(void)
 {
+	m_nDataSize = 1;
+	m_nDataUsed = 0;
+
+	m_pData = new Variant[m_nDataSize];
 }
 
 VarList::~VarList(void)
 {
+	delete [] m_pData;
+	m_pData = NULL;
+}
+
+void VarList::ExpandMemory()
+{
+	Variant* pNewData = new Variant[m_nDataSize*2];
+	memcpy(pNewData, m_pData, m_nDataSize);
+	m_pData = pNewData;
+	m_nDataSize *= 2;
 }

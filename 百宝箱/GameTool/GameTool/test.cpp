@@ -13,13 +13,19 @@
 using namespace std;
 
 #include "Variant.h"
+#include "VarList.h"
 
 int main()
 {
+#pragma region
 	Variant v;
 	v = 11037;
+	cout<<v.IntVal()<<" "<<v.GetType()<<" "<<sizeof(Variant)<<endl;
 
-	cout<<v.IntVal()<<"	"<<v.GetType()<<endl;
+	VarList list;
+	list << 1 << 2;
+	cout<<list.IntVal(0)<<" "<<list.IntVal(1)<<endl;
+#pragma endregion
 
 	system("pause");
 	return 0;
