@@ -21,6 +21,15 @@ struct Variant
 	VDATA vdata; //数据
 	VTYPE vt; //数据类型
 
+	VTYPE GetType() const { return vt; };
+
+	Variant& operator = (int nValue)
+	{
+		vdata.intValue = nValue; 
+		vt = VTYPE_INT;
+		return *this;
+	};
+
 	inline int IntVal() const { return vdata.intValue; };
 };
 

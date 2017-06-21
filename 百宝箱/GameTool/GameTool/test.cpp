@@ -17,10 +17,9 @@ using namespace std;
 int main()
 {
 	Variant v;
-	v.vdata.intValue = 1;
-	v.vt = VTYPE_INT;
+	v = 11037;
 
-	cout<<v.IntVal()<<endl;
+	cout<<v.IntVal()<<"	"<<v.GetType()<<endl;
 
 	system("pause");
 	return 0;
