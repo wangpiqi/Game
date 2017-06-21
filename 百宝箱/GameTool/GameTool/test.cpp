@@ -23,8 +23,8 @@ int main()
 	cout<<v.IntVal()<<" "<<v.GetType()<<" "<<sizeof(Variant)<<endl;
 
 	VarList list;
-	list << 1 << 2;
-	cout<<list.IntVal(0)<<" "<<list.IntVal(1)<<endl;
+	list << 1;
+	cout<<list.IntVal(0)<<" "<<list.GetType(0)<<endl;
 #pragma endregion
 
 	system("pause");

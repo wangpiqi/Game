@@ -22,6 +22,8 @@ public:
 	VarList(void);
 	~VarList(void);
 
+	VTYPE GetType(int nIndex) const { return m_pData[nIndex].vt; };
+
 	VarList& operator << (int nValue)
 	{
 		if (m_nDataUsed >= m_nDataSize)
@@ -29,7 +31,7 @@ public:
 			ExpandMemory();
 		}
 
-		m_pData[m_nDataUsed].vdata.intValue = nValue;
+		m_pData[m_nDataUsed] = nValue;
 		++m_nDataUsed;
 
 		return *this;
@@ -37,6 +39,11 @@ public:
 
 	inline int IntVal(int nIndex) const 
 	{
+		if (nIndex > m_nDataUsed)
+		{
+			return 0;
+		}
+
 		return m_pData[nIndex].vdata.intValue; 
 	};
 
