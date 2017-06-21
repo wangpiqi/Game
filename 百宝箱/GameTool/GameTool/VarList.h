@@ -16,6 +16,8 @@
 
 #include "Variant.h"
 
+static const int DATA_SIZE = 1;
+
 class VarList
 {
 public:
