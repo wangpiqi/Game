@@ -27,7 +27,8 @@ int main()
 	cout<<list.IntVal(0)<<" "<<list.GetType(0)
 		<<" "<<list.IntVal(1)<<" "<<list.GetType(1)
 		<<" "<<list.IntVal(2)<<" "<<list.GetType(2)
-		<<" "<<list.StringVal(3)<<" "<<list.GetType(3)<<endl;
+		<<" "<<list.StringVal(3)<<" "<<list.GetType(3)
+		<<" "<<list.IntVal(4)<<" "<<list.GetType(4)<<endl;
 #pragma endregion
 
 	system("pause");

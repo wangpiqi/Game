@@ -24,7 +24,15 @@ public:
 	VarList(void);
 	~VarList(void);
 
-	VTYPE GetType(int nIndex) const { return m_pData[nIndex].vt; };
+	VTYPE GetType(int nIndex) const 
+	{
+		if (nIndex >= m_nDataUsed)
+		{
+			return VTYPE_NULL;
+		}
+
+		return m_pData[nIndex].vt; 
+	};
 
 	VarList& operator << (int nValue)
 	{
@@ -54,7 +62,7 @@ public:
 
 	inline int IntVal(int nIndex) const 
 	{
-		if (nIndex > m_nDataUsed)
+		if (nIndex >= m_nDataUsed)
 		{
 			return 0;
 		}
@@ -64,7 +72,7 @@ public:
 
 	inline const char* StringVal(int nIndex) const 
 	{
-		if (nIndex > m_nDataUsed)
+		if (nIndex >= m_nDataUsed)
 		{
 			return "";
 		}
