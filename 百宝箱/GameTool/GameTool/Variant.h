@@ -30,7 +30,15 @@ struct Variant
 		return *this;
 	};
 
+	Variant& operator = (const char* szValue)
+	{
+		vdata.stringValue = szValue; 
+		vt = VTYPE_STRING;
+		return *this;
+	};
+
 	inline int IntVal() const { return vdata.intValue; };
+	inline const char* StringVal() const { return vdata.stringValue; };
 };
 
 #endif

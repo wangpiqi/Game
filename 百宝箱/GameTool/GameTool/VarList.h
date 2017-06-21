@@ -39,6 +39,19 @@ public:
 		return *this;
 	};
 
+	VarList& operator << (const char* szValue)
+	{
+		if (m_nDataUsed >= m_nDataSize)
+		{
+			ExpandMemory();
+		}
+
+		m_pData[m_nDataUsed] = szValue;
+		++m_nDataUsed;
+
+		return *this;
+	};
+
 	inline int IntVal(int nIndex) const 
 	{
 		if (nIndex > m_nDataUsed)
@@ -47,6 +60,16 @@ public:
 		}
 
 		return m_pData[nIndex].IntVal(); 
+	};
+
+	inline const char* StringVal(int nIndex) const 
+	{
+		if (nIndex > m_nDataUsed)
+		{
+			return "";
+		}
+
+		return m_pData[nIndex].StringVal(); 
 	};
 
 private:

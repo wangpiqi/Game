@@ -23,10 +23,11 @@ int main()
 	cout<<v.IntVal()<<" "<<v.GetType()<<" "<<sizeof(Variant)<<endl;
 
 	VarList list;
-	list << 22 << 50 << 11;
+	list << 22 << 50 << 11 << "Hello!";
 	cout<<list.IntVal(0)<<" "<<list.GetType(0)
 		<<" "<<list.IntVal(1)<<" "<<list.GetType(1)
-		<<" "<<list.IntVal(2)<<" "<<list.GetType(2)<<endl;
+		<<" "<<list.IntVal(2)<<" "<<list.GetType(2)
+		<<" "<<list.StringVal(3)<<" "<<list.GetType(3)<<endl;
 #pragma endregion
 
 	system("pause");
