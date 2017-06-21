@@ -44,7 +44,7 @@ public:
 			return 0;
 		}
 
-		return m_pData[nIndex].vdata.intValue; 
+		return m_pData[nIndex].IntVal(); 
 	};
 
 private:
