@@ -212,6 +212,26 @@
 				>
 			</File>
 		</Filter>
+		<Filter
+			Name="Event"
+			>
+			<File
+				RelativePath=".\Event.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Event.h"
+				>
+			</File>
+			<File
+				RelativePath=".\EventManager.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\EventManager.h"
+				>
+			</File>
+		</Filter>
 		<File
 			RelativePath=".\GameEngine.cpp"
 			>

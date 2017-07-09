@@ -167,6 +167,34 @@
 	<References>
 	</References>
 	<Files>
+		<Filter
+			Name="Logic"
+			>
+			<File
+				RelativePath=".\EntityA.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\EntityA.h"
+				>
+			</File>
+			<File
+				RelativePath=".\EntityB.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\EntityB.h"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="Define"
+			>
+			<File
+				RelativePath=".\client_command_define.h"
+				>
+			</File>
+		</Filter>
 		<File
 			RelativePath=".\Game.cpp"
 			>
