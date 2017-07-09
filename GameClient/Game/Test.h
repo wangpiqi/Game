@@ -19,5 +19,7 @@ public:
 
 public:
 	static void TestXXX();
+
 	static void TestPrimitive();
+	static void TestEvent();
 };

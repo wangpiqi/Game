@@ -12,6 +12,7 @@
 #include "Test.h"
 #include "RenderSystem.h"
 #include "macro_util.h"
+#include "EntityA.h"
 
 Test::Test(void)
 {
@@ -24,6 +25,7 @@ Test::~Test(void)
 void Test::TestXXX()
 {
 	TestPrimitive();
+	TestEvent();
 }
 
 void Test::TestPrimitive()
@@ -39,4 +41,10 @@ void Test::TestPrimitive()
 	int nArraySize = ARRAY_SIZE(Vertices);
 
 	RenderSystemInst->CreatePrimitive(Vertices, nArraySize);
+}
+
+void Test::TestEvent()
+{
+	EntityA entityA;
+	entityA.Func();
 }
