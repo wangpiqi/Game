@@ -165,24 +165,28 @@
 	<References>
 	</References>
 	<Files>
+		<Filter
+			Name="Variant"
+			>
+			<File
+				RelativePath=".\Variant.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Variant_Define.h"
+				>
+			</File>
+			<File
+				RelativePath=".\VarList.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\VarList.h"
+				>
+			</File>
+		</Filter>
 		<File
 			RelativePath=".\test.cpp"
-			>
-		</File>
-		<File
-			RelativePath=".\Variant.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Variant_Define.h"
-			>
-		</File>
-		<File
-			RelativePath=".\VarList.cpp"
-			>
-		</File>
-		<File
-			RelativePath=".\VarList.h"
 			>
 		</File>
 	</Files>
