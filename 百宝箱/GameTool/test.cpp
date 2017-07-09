@@ -15,10 +15,12 @@ using namespace std;
 #include "Variant.h"
 #include "VarList.h"
 
+extern int TestFastDelegate(void);
+
 int main()
 {
 #pragma region
-	Variant v;
+	/*Variant v;
 	v = 11037;
 	cout<<v.IntVal()<<" "<<v.GetType()<<" "<<sizeof(Variant)<<endl;
 
@@ -28,7 +30,13 @@ int main()
 		<<" "<<list.IntVal(1)<<" "<<list.GetType(1)
 		<<" "<<list.IntVal(2)<<" "<<list.GetType(2)
 		<<" "<<list.StringVal(3)<<" "<<list.GetType(3)
-		<<" "<<list.IntVal(4)<<" "<<list.GetType(4)<<endl;
+		<<" "<<list.IntVal(4)<<" "<<list.GetType(4)<<endl;*/
+#pragma endregion
+
+#pragma region
+
+	TestFastDelegate();
+
 #pragma endregion
 
 	system("pause");

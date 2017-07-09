@@ -56,12 +56,13 @@ public:
 
 using namespace fastdelegate;
 
-int main(void)
+int TestFastDelegate(void)
 {
 	// Delegates with up to 8 parameters are supported.
 	// Here's the case for a void function.
 	// We declare a delegate and attach it to SimpleVoidFunction()
-	printf("-- FastDelegate demo --\nA no-parameter delegate is declared using FastDelegate0\n\n");
+	printf("-- FastDelegate demo --\n\
+		A no-parameter delegate is declared using FastDelegate0\n\n");
 
 	FastDelegate0<> noparameterdelegate(&SimpleVoidFunction);
 

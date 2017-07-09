@@ -185,6 +185,22 @@
 				>
 			</File>
 		</Filter>
+		<Filter
+			Name="FastDelegate"
+			>
+			<File
+				RelativePath=".\FastDelegate_src\Demo.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\FastDelegate_src\FastDelegate.h"
+				>
+			</File>
+			<File
+				RelativePath=".\FastDelegate_src\FastDelegateBind.h"
+				>
+			</File>
+		</Filter>
 		<File
 			RelativePath=".\test.cpp"
 			>
