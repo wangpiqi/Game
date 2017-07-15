@@ -22,9 +22,7 @@ int WINAPI WinMain( __in HINSTANCE hInstance, __in_opt HINSTANCE hPrevInstance, 
 	Game::GetSingleton()->RunGame();
 
 	//¹Ø±ÕÓÎÏ·
-	Game::GetSingleton()->ShutGame();
-
-	UnregisterClass(CLASS_NAME, hInstance);
+	Game::GetSingleton()->ShutGame(hInstance);
 
 	return 0;
 }

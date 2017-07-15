@@ -96,9 +96,12 @@ bool Game::RunGame()
 	return true;
 }
 
-bool Game::ShutGame()
+bool Game::ShutGame(HINSTANCE hInstance)
 {
 	GameEngine::GetSingleton()->ShutGameEngine();
+
+	UnregisterClass(CLASS_NAME, hInstance);
+
 	return true;
 }
 

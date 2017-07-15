@@ -27,7 +27,7 @@ public:
 
 	bool InitGame(HINSTANCE hInstance);
 	bool RunGame();
-	bool ShutGame();
+	bool ShutGame(HINSTANCE hInstance);
 
 private:
 	bool OnUpdate();
