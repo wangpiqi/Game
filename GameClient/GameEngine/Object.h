@@ -12,7 +12,7 @@
 #pragma once
 
 #include <d3d9.h>
-#include "Vertex.h"
+#include "RenderSystem\Vertex.h"
 
 class Object
 {

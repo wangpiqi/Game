@@ -10,7 +10,7 @@
 	purpose:	
 *********************************************************************/
 #include "Test.h"
-#include "RenderSystem.h"
+#include "RenderSystem\RenderSystem.h"
 #include "macro_util.h"
 #include "EntityA.h"
 #include "EntityB.h"

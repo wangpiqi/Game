@@ -12,7 +12,7 @@
 #pragma once
 
 #include "Singleton.h"
-#include "Vertex.h"
+#include "RenderSystem\Vertex.h"
 
 class ObjectManager : public Singleton<ObjectManager>
 {

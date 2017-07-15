@@ -14,7 +14,7 @@
 #ifndef _MACRO_UTIL_H_
 #define _MACRO_UTIL_H_
 
-#include "EventManager.h"
+#include "Event\EventManager.h"
 
 #define CLASS_NAME L"Game"
 #define WINDOW_NAME L"Game"

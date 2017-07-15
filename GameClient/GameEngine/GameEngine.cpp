@@ -11,7 +11,7 @@
 *********************************************************************/
 #include "GameEngine.h"
 #include "..\Public\macro_util.h"
-#include "RenderSystem.h"
+#include "RenderSystem\RenderSystem.h"
 
 GameEngine::GameEngine(void)
 {

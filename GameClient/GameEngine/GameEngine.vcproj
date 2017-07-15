@@ -40,10 +40,11 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
+				AdditionalOptions="/MP"
 				Optimization="0"
 				AdditionalIncludeDirectories="../../Public;DXUT\Core"
 				PreprocessorDefinitions="WIN32;_DEBUG;_LIB"
-				MinimalRebuild="true"
+				MinimalRebuild="false"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
 				UsePrecompiledHeader="0"
@@ -175,6 +176,30 @@
 					>
 				</File>
 			</Filter>
+			<Filter
+				Name="Event"
+				>
+				<File
+					RelativePath="..\..\Public\Event\Event.cpp"
+					>
+				</File>
+				<File
+					RelativePath="..\..\Public\Event\Event.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\Public\Event\EventManager.cpp"
+					>
+				</File>
+				<File
+					RelativePath="..\..\Public\Event\EventManager.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\Public\FastDelegate.h"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="Entity"
@@ -200,17 +225,37 @@
 			Name="RenderSystem"
 			>
 			<File
-				RelativePath=".\RenderSystem.cpp"
+				RelativePath=".\RenderSystem\RenderSystem.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\RenderSystem.h"
+				RelativePath=".\RenderSystem\RenderSystem.h"
 				>
 			</File>
 			<File
 				RelativePath=".\Vertex.h"
 				>
 			</File>
+			<Filter
+				Name="Material"
+				>
+				<File
+					RelativePath=".\RenderSystem\Material.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\RenderSystem\Material.h"
+					>
+				</File>
+				<File
+					RelativePath=".\RenderSystem\MaterialManager.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\RenderSystem\MaterialManager.h"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="Object"
@@ -233,34 +278,10 @@
 			</File>
 		</Filter>
 		<Filter
-			Name="Event"
-			>
-			<File
-				RelativePath=".\Event.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Event.h"
-				>
-			</File>
-			<File
-				RelativePath=".\EventManager.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\EventManager.h"
-				>
-			</File>
-			<File
-				RelativePath="..\..\Public\FastDelegate.h"
-				>
-			</File>
-		</Filter>
-		<Filter
 			Name="Define"
 			>
 			<File
-				RelativePath=".\Event_Define.h"
+				RelativePath="..\..\Public\Event\Event_Define.h"
 				>
 			</File>
 		</Filter>
