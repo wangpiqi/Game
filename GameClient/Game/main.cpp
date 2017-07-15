@@ -18,23 +18,8 @@ int WINAPI WinMain( __in HINSTANCE hInstance, __in_opt HINSTANCE hPrevInstance, 
 	//初始化游戏
 	Game::GetSingleton()->InitGame(hInstance);
 
-	//消息循环
-	MSG msg;
-	ZeroMemory(&msg, sizeof(MSG));
-
-	while (msg.message != WM_QUIT)
-	{
-		if (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
-		{
-			TranslateMessage(&msg);
-			DispatchMessage(&msg);
-		}
-		else
-		{
-			//运行游戏
-			Game::GetSingleton()->RunGame();
-		}
-	}
+	//运行游戏
+	Game::GetSingleton()->RunGame();
 
 	//关闭游戏
 	Game::GetSingleton()->ShutGame();
