@@ -76,4 +76,9 @@ if ((p) != NULL)\
 EventManager::GetSingleton()->EventConnect(event, EventDelegate(this, delegate));
 #endif
 
+#ifndef SEND_EVENT
+#define SEND_EVENT(event)\
+EventManager::GetSingleton()->SendEvent(event);
+#endif
+
 #endif

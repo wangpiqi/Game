@@ -1,6 +1,7 @@
 #pragma once
 
 #include "EventManager.h"
+#include "macro_util.h"
 
 class EntityA
 {
