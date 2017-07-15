@@ -26,7 +26,7 @@ Test::~Test(void)
 void Test::TestXXX()
 {
 	TestPrimitive();
-	TestEvent();
+	//TestEvent();
 }
 
 void Test::TestPrimitive()

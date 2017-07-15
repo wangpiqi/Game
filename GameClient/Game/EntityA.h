@@ -1,5 +1,7 @@
 #pragma once
 
+#include "EventManager.h"
+
 class EntityA
 {
 public:
@@ -9,6 +11,6 @@ public:
 public:
 	void Func()
 	{
-		EventManager::GetSingleton()->SendEvent("on_test");
+		SEND_EVENT("on_test");
 	};
 };
