@@ -14,6 +14,21 @@
 #include "macro_util.h"
 #include "Test.h"
 
+LRESULT WINAPI MsgProc( HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam )
+{
+	switch (msg)
+	{
+	case WM_DESTROY:
+		{
+			PostQuitMessage(0);
+			return 0;
+		}
+		break;
+	}
+
+	return DefWindowProc(hWnd, msg, wParam, lParam);
+}
+
 Game::Game(void)
 {
 	return;
@@ -24,9 +39,33 @@ Game::~Game(void)
 	return;
 }
 
-bool Game::InitGame(HWND hWnd, bool bFullScreen)
+bool Game::InitGame(HINSTANCE hInstance)
 {
-	GameEngine::GetSingleton()->InitGameEngine(hWnd, bFullScreen);
+	//定义窗口类
+	WNDCLASS cls;
+	cls.cbClsExtra = 0;
+	cls.cbWndExtra = 0;
+	cls.hbrBackground = NULL;
+	cls.hCursor = NULL;
+	cls.hIcon = NULL;
+	cls.hInstance = hInstance;
+	cls.lpfnWndProc = MsgProc;
+	cls.lpszClassName = CLASS_NAME;
+	cls.lpszMenuName = NULL;
+	cls.style = 0;
+
+	//注册窗口类
+	RegisterClass(&cls);
+
+	//创建窗口
+	HWND hWnd = CreateWindow(CLASS_NAME, WINDOW_NAME, WS_OVERLAPPEDWINDOW
+		, WINDOW_LEFT, WINDOW_TOP, WINDOW_WIDTH, WINDOW_HEIGHT, NULL, NULL, hInstance, 0);
+
+	//显示更新窗口
+	ShowWindow(hWnd, SW_SHOW);
+	UpdateWindow(hWnd);
+
+	GameEngine::GetSingleton()->InitGameEngine(hWnd, FULL_SCREEN);
 
 #ifdef _DEBUG
 	Test::TestXXX();

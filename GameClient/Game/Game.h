@@ -25,7 +25,7 @@ public:
 	bool Run(){ return true; };
 	bool Shut(){ return true; };
 
-	bool InitGame(HWND hWnd, bool bFullScreen);
+	bool InitGame(HINSTANCE hInstance);
 	bool RunGame();
 	bool ShutGame();
 };
