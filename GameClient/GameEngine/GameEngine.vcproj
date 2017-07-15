@@ -231,6 +231,18 @@
 				RelativePath=".\EventManager.h"
 				>
 			</File>
+			<File
+				RelativePath="..\..\Public\FastDelegate.h"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="Define"
+			>
+			<File
+				RelativePath=".\Event_Define.h"
+				>
+			</File>
 		</Filter>
 		<File
 			RelativePath=".\GameEngine.cpp"
