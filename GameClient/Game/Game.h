@@ -31,4 +31,5 @@ public:
 
 private:
 	bool OnUpdate();
+	bool CreateConsole();
 };

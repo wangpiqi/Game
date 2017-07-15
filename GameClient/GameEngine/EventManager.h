@@ -11,12 +11,22 @@
 *********************************************************************/
 #pragma once
 
-class EventManager
+#include <map>
+#include "Event_Define.h"
+#include "Singleton.h"
+
+class EventManager : public Singleton<EventManager>
 {
 public:
 	EventManager(void);
 	~EventManager(void);
 
 public:
+	void EventConnect(const char* szEvent, EventDelegate delegate);
+	void SendEvent(const char* szEvent);
+
 	bool SendCommand();
+
+private:
+	EventDelegateMap m_EventDelegateMap;
 };

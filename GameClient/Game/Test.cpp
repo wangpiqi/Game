@@ -13,6 +13,7 @@
 #include "RenderSystem.h"
 #include "macro_util.h"
 #include "EntityA.h"
+#include "EntityB.h"
 
 Test::Test(void)
 {
@@ -46,5 +47,7 @@ void Test::TestPrimitive()
 void Test::TestEvent()
 {
 	EntityA entityA;
+	EntityB entityB;
+
 	entityA.Func();
 }

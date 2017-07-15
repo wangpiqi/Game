@@ -155,6 +155,26 @@
 				RelativePath="..\..\Public\Singleton.h"
 				>
 			</File>
+			<Filter
+				Name="Variant"
+				>
+				<File
+					RelativePath="..\..\Public\Variant\Variant.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\Public\Variant\Variant_Define.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\Public\Variant\VarList.cpp"
+					>
+				</File>
+				<File
+					RelativePath="..\..\Public\Variant\VarList.h"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="Entity"

@@ -21,6 +21,33 @@ EventManager::~EventManager(void)
 	//
 }
 
+void EventManager::EventConnect(const char* szEvent, EventDelegate delegate)
+{
+	EventDelegateMap::iterator it = m_EventDelegateMap.begin();
+	if (it != m_EventDelegateMap.end())
+	{
+		return;
+	}
+
+	m_EventDelegateMap[szEvent] = delegate;
+
+	return;
+}
+
+void EventManager::SendEvent(const char* szEvent)
+{
+	EventDelegateMap::iterator it = m_EventDelegateMap.begin();
+	if (it == m_EventDelegateMap.end())
+	{
+		return;
+	}
+
+	VarList args;
+	it->second(szEvent, args);
+
+	return;
+}
+
 bool EventManager::SendCommand()
 {
 	//

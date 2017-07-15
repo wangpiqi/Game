@@ -14,6 +14,8 @@
 #ifndef _MACRO_UTIL_H_
 #define _MACRO_UTIL_H_
 
+#include "EventManager.h"
+
 #define CLASS_NAME L"Game"
 #define WINDOW_NAME L"Game"
 
@@ -67,6 +69,11 @@ if ((p) != NULL)\
 
 #ifndef ARRAY_SIZE
 #define ARRAY_SIZE(a) sizeof(a)/sizeof(*a)
+#endif
+
+#ifndef REG_EVENT
+#define REG_EVENT(event, delegate)\
+EventManager::GetSingleton()->EventConnect(event, EventDelegate(this, delegate));
 #endif
 
 #endif

@@ -13,6 +13,9 @@
 #include "GameEngine.h"
 #include "macro_util.h"
 #include "Test.h"
+#include <stdio.h>
+#include <io.h>
+#include <fcntl.h>
 
 LRESULT WINAPI MsgProc( HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam )
 {
@@ -41,6 +44,10 @@ Game::~Game(void)
 
 bool Game::InitGame(HINSTANCE hInstance)
 {
+#ifdef _DEBUG
+	CreateConsole();
+#endif
+
 	//定义窗口类
 	WNDCLASS cls;
 	cls.cbClsExtra = 0;
@@ -109,4 +116,22 @@ bool Game::OnUpdate()
 {
 	GameEngine::GetSingleton()->RunGameEngine();
 	return true;
+}
+
+bool Game::CreateConsole()
+{
+	FreeConsole();
+
+	if (AllocConsole())
+	{
+		int hCrt = _open_osfhandle((long)GetStdHandle(STD_OUTPUT_HANDLE), _O_TEXT);
+		*stdout = *(::_fdopen(hCrt, "w"));
+		::setvbuf(stdout, NULL, _IONBF, 0);
+		*stderr = *(::_fdopen(hCrt, "w"));
+		::setvbuf(stderr, NULL, _IONBF, 0);
+
+		return true;
+	}
+
+	return false;
 }

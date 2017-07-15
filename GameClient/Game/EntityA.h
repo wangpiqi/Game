@@ -9,6 +9,6 @@ public:
 public:
 	void Func()
 	{
-		//
+		EventManager::GetSingleton()->SendEvent("on_test");
 	};
 };
