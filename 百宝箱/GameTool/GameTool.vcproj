@@ -41,6 +41,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
+				AdditionalIncludeDirectories="..\..\Public"
 				PreprocessorDefinitions="WIN32;_DEBUG;_CONSOLE"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -169,19 +170,19 @@
 			Name="Variant"
 			>
 			<File
-				RelativePath=".\Variant.h"
+				RelativePath="..\..\Public\Variant\Variant.h"
 				>
 			</File>
 			<File
-				RelativePath=".\Variant_Define.h"
+				RelativePath="..\..\Public\Variant\Variant_Define.h"
 				>
 			</File>
 			<File
-				RelativePath=".\VarList.cpp"
+				RelativePath="..\..\Public\Variant\VarList.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\VarList.h"
+				RelativePath="..\..\Public\Variant\VarList.h"
 				>
 			</File>
 		</Filter>

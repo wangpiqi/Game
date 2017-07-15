@@ -12,8 +12,8 @@
 #include <iostream>
 using namespace std;
 
-#include "Variant.h"
-#include "VarList.h"
+#include "Variant/Variant.h"
+#include "Variant/VarList.h"
 
 extern int TestFastDelegate(void);
 
