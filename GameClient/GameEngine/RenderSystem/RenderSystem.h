@@ -15,8 +15,9 @@
 #include <d3d9.h>
 #include "Vertex.h"
 #include "..\RenderSystem_Define.h"
+#include "..\GameEngine_Define.h"
 
-#define RenderSystemInst RenderSystem::GetSingleton()
+//#define RenderSystemInst RenderSystem::GetSingleton()
 
 class RenderSystem : public Singleton<RenderSystem>
 {
@@ -29,7 +30,7 @@ public:
 	bool Run(){ return true; };
 	bool Shut(){ return true; };
 
-	bool InitRenderSystem(HWND hWnd, bool bFullScreen);
+	bool InitRenderSystem(const WindowsStruct& stWindows);
 	bool RunRenderSystem();
 	bool ShutRenderSystem();
 

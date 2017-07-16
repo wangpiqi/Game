@@ -21,21 +21,21 @@ GameEngine::~GameEngine(void)
 {
 }
 
-bool GameEngine::InitGameEngine(HWND hWnd, bool bFullScreen)
+bool GameEngine::InitGameEngine(const WindowsStruct& stWindows)
 {
-	RenderSystemInst->InitRenderSystem(hWnd, bFullScreen);
+	RenderSystem::GetSingleton()->InitRenderSystem(stWindows);
 	return true;
 }
 
 bool GameEngine::RunGameEngine()
 {
-	RenderSystemInst->RunRenderSystem();
+	RenderSystem::GetSingleton()->RunRenderSystem();
 	return true;
 }
 
 bool GameEngine::ShutGameEngine()
 {
-	RenderSystemInst->ShutRenderSystem();
+	RenderSystem::GetSingleton()->ShutRenderSystem();
 	return true;
 }
 

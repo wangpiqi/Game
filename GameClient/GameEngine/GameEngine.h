@@ -13,6 +13,7 @@
 
 #include "..\Public\Singleton.h"
 #include <Windows.h>
+#include "GameEngine_Define.h"
 
 class GameEngine : public Singleton<GameEngine>
 {
@@ -25,7 +26,7 @@ public:
 	bool Run(){ return true; };
 	bool Shut(){ return true; };
 
-	bool InitGameEngine(HWND hWnd, bool bFullScreen);
+	bool InitGameEngine(const WindowsStruct& stWindows);
 	bool RunGameEngine();
 	bool ShutGameEngine();
 

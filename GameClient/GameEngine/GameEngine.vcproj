@@ -285,6 +285,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\GameEngine_Define.h"
+				>
+			</File>
+			<File
 				RelativePath=".\RenderSystem_Define.h"
 				>
 			</File>

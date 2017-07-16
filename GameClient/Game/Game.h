@@ -13,6 +13,7 @@
 
 #include "Singleton.h"
 #include <Windows.h>
+#include "GameEngine_Define.h"
 
 class Game : public Singleton<Game>
 {

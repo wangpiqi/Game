@@ -66,14 +66,14 @@ void Test::TestLight()
 		Vertices[2 * i + 1].normal = D3DXVECTOR3( sinf( theta ), 0.0f, cosf( theta ) );
 	}
 
-	RenderSystemInst->CreatePrimitive(D3DPT_TRIANGLESTRIP, Vertices, ARRAY_SIZE(Vertices));
+	RenderSystem::GetSingleton()->CreatePrimitive(D3DPT_TRIANGLESTRIP, Vertices, ARRAY_SIZE(Vertices));
 
 	return;
 }
 
 void Test::RenderLight()
 {
-	RenderStructDirectX stDirectX = RenderSystemInst->GetRenderStructDirectX();
+	RenderStructDirectX stDirectX = RenderSystem::GetSingleton()->GetRenderStructDirectX();
 
 	D3DXMATRIXA16 matWorld;
 	D3DXMatrixIdentity( &matWorld );

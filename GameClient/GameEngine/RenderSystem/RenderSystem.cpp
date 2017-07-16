@@ -26,7 +26,7 @@ RenderSystem::~RenderSystem(void)
 	//
 }
 
-bool RenderSystem::InitRenderSystem(HWND hWnd, bool bFullScreen)
+bool RenderSystem::InitRenderSystem(const WindowsStruct& stWindows)
 {
 	HRESULT hr = S_FALSE;
 
@@ -34,13 +34,13 @@ bool RenderSystem::InitRenderSystem(HWND hWnd, bool bFullScreen)
 	NULL_RETURN(m_RenderStructDirectX.m_pD3D, false);
 
 	ZeroMemory(&m_RenderStructDirectX.m_d3dpp, sizeof(m_RenderStructDirectX.m_d3dpp));
-	m_RenderStructDirectX.m_d3dpp.Windowed = !bFullScreen;
+	m_RenderStructDirectX.m_d3dpp.Windowed = !stWindows.bFullScreen;
 	m_RenderStructDirectX.m_d3dpp.SwapEffect = D3DSWAPEFFECT_DISCARD;
 	m_RenderStructDirectX.m_d3dpp.BackBufferFormat = D3DFMT_UNKNOWN;
 	m_RenderStructDirectX.m_d3dpp.EnableAutoDepthStencil = TRUE;
 	m_RenderStructDirectX.m_d3dpp.AutoDepthStencilFormat = D3DFMT_D16;
 
-	hr = m_RenderStructDirectX.m_pD3D->CreateDevice(D3DADAPTER_DEFAULT, D3DDEVTYPE_HAL, hWnd, D3DCREATE_SOFTWARE_VERTEXPROCESSING, 
+	hr = m_RenderStructDirectX.m_pD3D->CreateDevice(D3DADAPTER_DEFAULT, D3DDEVTYPE_HAL, stWindows.hWnd, D3DCREATE_SOFTWARE_VERTEXPROCESSING, 
 		&m_RenderStructDirectX.m_d3dpp, &m_RenderStructDirectX.m_pd3dDevice);
 
 	if (FAILED(hr))

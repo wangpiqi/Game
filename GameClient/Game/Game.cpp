@@ -72,7 +72,10 @@ bool Game::InitGame(HINSTANCE hInstance)
 	ShowWindow(hWnd, SW_SHOW);
 	UpdateWindow(hWnd);
 
-	GameEngine::GetSingleton()->InitGameEngine(hWnd, FULL_SCREEN);
+	WindowsStruct st;
+	st.hWnd = hWnd;
+	st.bFullScreen = FULL_SCREEN;
+	GameEngine::GetSingleton()->InitGameEngine(st);
 
 #ifdef _DEBUG
 	Test test;
