@@ -11,6 +11,10 @@
 *********************************************************************/
 #include "RenderSystem.h"
 #include "macro_util.h"
+#include <assert.h>
+
+#define CLEAR_FLAGS (D3DCLEAR_TARGET | D3DCLEAR_ZBUFFER | D3DCLEAR_STENCIL)
+#define CLEAR_COLOR D3DCOLOR_XRGB( 0, 0, 255 )
 
 RenderSystem::RenderSystem(void)
 {
@@ -33,20 +37,28 @@ bool RenderSystem::InitRenderSystem(HWND hWnd, bool bFullScreen)
 	m_RenderStructDirectX.m_d3dpp.Windowed = !bFullScreen;
 	m_RenderStructDirectX.m_d3dpp.SwapEffect = D3DSWAPEFFECT_DISCARD;
 	m_RenderStructDirectX.m_d3dpp.BackBufferFormat = D3DFMT_UNKNOWN;
+	m_RenderStructDirectX.m_d3dpp.EnableAutoDepthStencil = TRUE;
+	m_RenderStructDirectX.m_d3dpp.AutoDepthStencilFormat = D3DFMT_D16;
 
 	hr = m_RenderStructDirectX.m_pD3D->CreateDevice(D3DADAPTER_DEFAULT, D3DDEVTYPE_HAL, hWnd, D3DCREATE_SOFTWARE_VERTEXPROCESSING, 
 		&m_RenderStructDirectX.m_d3dpp, &m_RenderStructDirectX.m_pd3dDevice);
 
 	if (FAILED(hr))
 	{
+		assert(0);
 		return false;
 	}
+
+	SetRenderState();
 
 	return true;
 }
 
 bool RenderSystem::RunRenderSystem()
 {
+	HRESULT hr = m_RenderStructDirectX.m_pd3dDevice->Clear( 0, NULL, CLEAR_FLAGS,
+		CLEAR_COLOR, 1.0f, 0 );
+
 	// Begin the scene
 	if( SUCCEEDED( m_RenderStructDirectX.m_pd3dDevice->BeginScene() ) )
 	{
@@ -56,7 +68,7 @@ bool RenderSystem::RunRenderSystem()
 	}
 
 	// Present the backbuffer contents to the display
-	m_RenderStructDirectX.m_pd3dDevice->Present( NULL, NULL, NULL, NULL );
+	m_RenderStructDirectX.m_pd3dDevice->Present( 0, 0, 0, 0 );
 
 	return true;
 }
@@ -144,5 +156,13 @@ bool RenderSystem::RenderPrimitive()
 	hr = m_RenderStructDirectX.m_pd3dDevice->DrawPrimitive( m_RenderStructDirectX.m_nType, 0, nPrimitiveCount );
 
 	return true;
+}
+
+void RenderSystem::SetRenderState()
+{
+	HRESULT hr = m_RenderStructDirectX.m_pd3dDevice->SetRenderState( D3DRS_CULLMODE, D3DCULL_NONE );
+	hr = m_RenderStructDirectX.m_pd3dDevice->SetRenderState( D3DRS_ZENABLE, TRUE );
+
+	return;
 }
 

@@ -44,5 +44,8 @@ public:
 	bool RenderPrimitive();
 
 private:
+	void SetRenderState();
+
+private:
 	RenderStructDirectX m_RenderStructDirectX;
 };
