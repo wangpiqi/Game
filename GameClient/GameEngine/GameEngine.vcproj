@@ -233,7 +233,7 @@
 				>
 			</File>
 			<File
-				RelativePath=".\Vertex.h"
+				RelativePath=".\RenderSystem\Vertex.h"
 				>
 			</File>
 			<Filter
