@@ -13,5 +13,7 @@
 
 Material* MaterialManager::CreateMaterial(VarList& args)
 {
-	return NULL;
+	Material* pMaterial = new Material();
+	pMaterial->Create(args);
+	return pMaterial;
 }

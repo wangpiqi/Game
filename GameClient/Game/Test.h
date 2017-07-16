@@ -20,12 +20,12 @@ public:
 	~Test(void);
 
 public:
-	static void TestXXX();
+	void TestXXX();
 
-	static void TestPrimitive();
-	static void TestEvent();
+	void TestPrimitive();
+	void TestEvent();
 
-	static void TestLight();
+	void TestLight();
 	void RenderLight();
 
 private:

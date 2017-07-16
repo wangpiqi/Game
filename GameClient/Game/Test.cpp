@@ -14,6 +14,7 @@
 #include "macro_util.h"
 #include "EntityA.h"
 #include "EntityB.h"
+#include "RenderSystem\MaterialManager.h"
 
 Test::Test(void)
 {
@@ -67,6 +68,10 @@ void Test::TestLight()
 	}
 
 	RenderSystem::GetSingleton()->CreatePrimitive(D3DPT_TRIANGLESTRIP, Vertices, ARRAY_SIZE(Vertices));
+
+	//´´½¨²ÄÖÊ
+	VarList args;
+	MaterialManager::GetSingleton()->CreateMaterial(args);
 
 	return;
 }

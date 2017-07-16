@@ -149,10 +149,6 @@
 			Name="Public"
 			>
 			<File
-				RelativePath="..\..\Public\macro_util.h"
-				>
-			</File>
-			<File
 				RelativePath="..\..\Public\Singleton.h"
 				>
 			</File>
@@ -197,6 +193,22 @@
 				</File>
 				<File
 					RelativePath="..\..\Public\FastDelegate.h"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="utils"
+				>
+				<File
+					RelativePath="..\..\Public\macro_util.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\Public\string_util.cpp"
+					>
+				</File>
+				<File
+					RelativePath="..\..\Public\string_util.h"
 					>
 				</File>
 			</Filter>
