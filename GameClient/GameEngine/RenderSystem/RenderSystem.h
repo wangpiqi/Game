@@ -14,6 +14,7 @@
 #include "Singleton.h"
 #include <d3d9.h>
 #include "Vertex.h"
+#include "..\RenderSystem_Define.h"
 
 #define RenderSystemInst RenderSystem::GetSingleton()
 
@@ -37,13 +38,9 @@ public:
 
 public:
 	bool CreatePrimitive(Vertex args[], int nArraySize);
+	bool SetVertexData(Vertex args[], int nArraySize);
 	bool RenderPrimitive();
 
 private:
-	IDirect3D9* m_pD3D;
-	IDirect3DDevice9* m_pd3dDevice;
-
-	D3DPRESENT_PARAMETERS m_d3dpp;
-
-	IDirect3DVertexBuffer9* m_pVertexBuffer;
+	RenderStructDirectX m_RenderStructDirectX;
 };
