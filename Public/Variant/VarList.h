@@ -24,6 +24,8 @@ public:
 	VarList(void);
 	~VarList(void);
 
+	size_t GetCount() const { return m_nDataUsed; };
+
 	VTYPE GetType(int nIndex) const 
 	{
 		if (nIndex >= m_nDataUsed)

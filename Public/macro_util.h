@@ -25,6 +25,9 @@
 #define WINDOW_HEIGHT 600
 #define FULL_SCREEN FALSE
 
+#define input
+#define output
+
 #ifndef SAFE_DELETE
 #define SAFE_DELETE(p)\
 	if ((p) != NULL)\

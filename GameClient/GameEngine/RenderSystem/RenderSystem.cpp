@@ -14,7 +14,7 @@
 #include <assert.h>
 
 #define CLEAR_FLAGS (D3DCLEAR_TARGET | D3DCLEAR_ZBUFFER | D3DCLEAR_STENCIL)
-#define CLEAR_COLOR D3DCOLOR_XRGB( 0, 0, 255 )
+#define CLEAR_COLOR D3DCOLOR_XRGB( 0, 200, 200 )
 
 RenderSystem::RenderSystem(void)
 {

@@ -71,6 +71,9 @@ void Test::TestLight()
 
 	//´´½¨²ÄÖÊ
 	VarList args;
+	std::string strDiffuse = "1.0f, 1.0f, 0.0f, 1.0f";
+	std::string strAmbient = "1.0f, 1.0f, 0.0f, 1.0f";
+	args << strDiffuse.c_str() << strAmbient.c_str();
 	MaterialManager::GetSingleton()->CreateMaterial(args);
 
 	return;
