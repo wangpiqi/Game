@@ -38,7 +38,9 @@ bool RenderSystem::InitRenderSystem(const WindowsStruct& stWindows)
 	m_RenderStructDirectX.m_d3dpp.SwapEffect = D3DSWAPEFFECT_DISCARD;
 	m_RenderStructDirectX.m_d3dpp.BackBufferFormat = D3DFMT_UNKNOWN;
 	m_RenderStructDirectX.m_d3dpp.EnableAutoDepthStencil = TRUE;
-	m_RenderStructDirectX.m_d3dpp.AutoDepthStencilFormat = D3DFMT_D16;
+	m_RenderStructDirectX.m_d3dpp.AutoDepthStencilFormat = D3DFMT_D24S8;
+	m_RenderStructDirectX.m_d3dpp.BackBufferWidth = stWindows.nWidth;
+	m_RenderStructDirectX.m_d3dpp.BackBufferHeight = stWindows.nHeight;
 
 	hr = m_RenderStructDirectX.m_pD3D->CreateDevice(D3DADAPTER_DEFAULT, D3DDEVTYPE_HAL, stWindows.hWnd, D3DCREATE_SOFTWARE_VERTEXPROCESSING, 
 		&m_RenderStructDirectX.m_d3dpp, &m_RenderStructDirectX.m_pd3dDevice);

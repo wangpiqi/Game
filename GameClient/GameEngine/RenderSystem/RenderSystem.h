@@ -26,10 +26,6 @@ public:
 	virtual ~RenderSystem(void);
 
 public:
-	bool Init(){ return true; };
-	bool Run(){ return true; };
-	bool Shut(){ return true; };
-
 	bool InitRenderSystem(const WindowsStruct& stWindows);
 	bool RunRenderSystem();
 	bool ShutRenderSystem();
@@ -39,7 +35,6 @@ public:
 
 	RenderStructDirectX GetRenderStructDirectX() const { return m_RenderStructDirectX; };
 
-public:
 	bool CreatePrimitive(D3DPRIMITIVETYPE nType, Vertex args[], int nArraySize);
 	bool SetVertexData(Vertex args[], int nArraySize);
 	bool RenderPrimitive();

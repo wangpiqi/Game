@@ -75,6 +75,8 @@ bool Game::InitGame(HINSTANCE hInstance)
 	WindowsStruct st;
 	st.hWnd = hWnd;
 	st.bFullScreen = FULL_SCREEN;
+	st.nWidth = WINDOW_WIDTH;
+	st.nHeight = WINDOW_HEIGHT;
 	GameEngine::GetSingleton()->InitGameEngine(st);
 
 #ifdef _DEBUG

@@ -22,10 +22,6 @@ public:
 	~Game(void);
 
 public:
-	bool Init(){ return true; };
-	bool Run(){ return true; };
-	bool Shut(){ return true; };
-
 	bool InitGame(HINSTANCE hInstance);
 	bool RunGame();
 	bool ShutGame(HINSTANCE hInstance);
