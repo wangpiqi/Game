@@ -75,7 +75,8 @@ bool Game::InitGame(HINSTANCE hInstance)
 	GameEngine::GetSingleton()->InitGameEngine(hWnd, FULL_SCREEN);
 
 #ifdef _DEBUG
-	Test::TestXXX();
+	Test test;
+	test.TestXXX();
 #endif
 
 	return true;

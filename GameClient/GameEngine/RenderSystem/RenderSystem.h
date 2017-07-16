@@ -36,8 +36,10 @@ public:
 	bool Render();
 	bool OnRender();
 
+	RenderStructDirectX GetRenderStructDirectX() const { return m_RenderStructDirectX; };
+
 public:
-	bool CreatePrimitive(Vertex args[], int nArraySize);
+	bool CreatePrimitive(D3DPRIMITIVETYPE nType, Vertex args[], int nArraySize);
 	bool SetVertexData(Vertex args[], int nArraySize);
 	bool RenderPrimitive();
 

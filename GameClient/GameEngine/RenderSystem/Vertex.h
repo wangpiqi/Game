@@ -15,12 +15,13 @@
 #pragma once
 
 #include <d3d9.h>
+#include <d3dx9math.h>
 
 struct Vertex
 {
-	FLOAT x, y, z, rhw; // The transformed position for the vertex
-	DWORD color;        // The vertex color
-	static const DWORD FVF = D3DFVF_XYZRHW|D3DFVF_DIFFUSE;
+	D3DXVECTOR3 position; // The 3D position for the vertex
+	D3DXVECTOR3 normal;   // The surface normal for the vertex
+	static const DWORD FVF = D3DFVF_XYZ|D3DFVF_NORMAL;
 };
 
 #endif

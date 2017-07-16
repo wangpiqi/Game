@@ -81,16 +81,22 @@ bool RenderSystem::Render()
 bool RenderSystem::OnRender()
 {
 	RenderPrimitive();
+
+	SEND_EVENT("OnRender");
+
 	return true;
 }
 
-bool RenderSystem::CreatePrimitive(Vertex args[], int nArraySize)
+bool RenderSystem::CreatePrimitive(D3DPRIMITIVETYPE nType, Vertex args[], int nArraySize)
 {
 	if (FAILED(m_RenderStructDirectX.m_pd3dDevice->CreateVertexBuffer(nArraySize*sizeof(Vertex), 0, Vertex::FVF, D3DPOOL_DEFAULT, 
 		&m_RenderStructDirectX.m_pVertexBuffer, NULL)))
 	{
 		return false;
 	}
+
+	m_RenderStructDirectX.m_nType = nType;
+	m_RenderStructDirectX.m_nNumVertices = nArraySize;
 
 	SetVertexData(args, nArraySize);
 
@@ -119,7 +125,24 @@ bool RenderSystem::RenderPrimitive()
 	HRESULT hr = S_FALSE;
 	hr = m_RenderStructDirectX.m_pd3dDevice->SetStreamSource( 0, m_RenderStructDirectX.m_pVertexBuffer, 0, sizeof( Vertex ) );
 	hr = m_RenderStructDirectX.m_pd3dDevice->SetFVF( Vertex::FVF );
-	hr = m_RenderStructDirectX.m_pd3dDevice->DrawPrimitive( D3DPT_TRIANGLELIST, 0, 1 );
+
+	UINT nPrimitiveCount = 1;
+	switch(m_RenderStructDirectX.m_nType)
+	{
+	case D3DPT_TRIANGLELIST:
+		{
+			nPrimitiveCount = m_RenderStructDirectX.m_nNumVertices / 3;
+		}
+		break;
+	case D3DPT_TRIANGLESTRIP:
+		{
+			nPrimitiveCount = m_RenderStructDirectX.m_nNumVertices - 2;
+		}
+		break;
+	}
+
+	hr = m_RenderStructDirectX.m_pd3dDevice->DrawPrimitive( m_RenderStructDirectX.m_nType, 0, nPrimitiveCount );
+
 	return true;
 }
 

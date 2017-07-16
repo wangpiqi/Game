@@ -11,6 +11,8 @@
 *********************************************************************/
 #pragma once
 
+#include "Variant\VarList.h"
+
 class Test
 {
 public:
@@ -22,4 +24,10 @@ public:
 
 	static void TestPrimitive();
 	static void TestEvent();
+
+	static void TestLight();
+	void RenderLight();
+
+private:
+	void OnRender(const char* szEvent, VarList& args);
 };
