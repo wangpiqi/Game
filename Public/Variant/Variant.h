@@ -32,7 +32,8 @@ struct Variant
 
 	Variant& operator = (const char* szValue)
 	{
-		vdata.stringValue = szValue; 
+		//vdata.stringValue = szValue; 
+		strcpy_s(vdata.stringValue, 128, szValue);
 		vt = VTYPE_STRING;
 		return *this;
 	};

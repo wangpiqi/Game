@@ -28,7 +28,8 @@ union VDATA
 	float floatValue; //VTYPE_FLOAT
 	double doubleValue; //VTYPE_DOUBLE
 	void* pointValue; //VTYPE_POINT
-	const char* stringValue; //VTYPE_STRING
+	//const char* stringValue; //VTYPE_STRING
+	char stringValue[128]; //VTYPE_STRING
 };
 
 enum VTYPE
