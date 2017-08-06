@@ -268,6 +268,26 @@
 					>
 				</File>
 			</Filter>
+			<Filter
+				Name="Light"
+				>
+				<File
+					RelativePath=".\RenderSystem\Light.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\RenderSystem\Light.h"
+					>
+				</File>
+				<File
+					RelativePath=".\RenderSystem\LightManager.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\RenderSystem\LightManager.h"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="Object"
@@ -298,6 +318,10 @@
 			</File>
 			<File
 				RelativePath=".\GameEngine_Define.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Manager_Define.h"
 				>
 			</File>
 			<File

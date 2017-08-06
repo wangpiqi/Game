@@ -78,6 +78,10 @@ void Test::TestLight()
 	RenderStructDirectX rsDirectX = RenderSystem::GetSingleton()->GetRenderStructDirectX();
 	rsDirectX.m_pd3dDevice->SetMaterial(&pMaterial->GetMaterial());
 
+	//´´½¨µÆ¹â
+	args.
+	LightManager::GetSingleton()->CreateLight(args);
+
 	return;
 }
 

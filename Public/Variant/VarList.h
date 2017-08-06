@@ -15,6 +15,7 @@
 #pragma once
 
 #include "Variant.h"
+#include "..\macro_util.h"
 
 static const int DATA_SIZE = 1;
 
@@ -25,6 +26,15 @@ public:
 	~VarList(void);
 
 	size_t GetCount() const { return m_nDataUsed; };
+	void Clear()
+	{
+		SAFE_DELETE_ARRAY(m_pData);
+
+		m_nDataSize = DATA_SIZE;
+		m_nDataUsed = 0;
+
+		m_pData = new Variant[m_nDataSize];
+	};
 
 	VTYPE GetType(int nIndex) const 
 	{

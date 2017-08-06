@@ -21,8 +21,7 @@ VarList::VarList(void)
 
 VarList::~VarList(void)
 {
-	delete [] m_pData;
-	m_pData = NULL;
+	Clear();
 }
 
 void VarList::ExpandMemory()
