@@ -15,7 +15,6 @@
 #pragma once
 
 #include "Variant.h"
-#include "..\macro_util.h"
 
 static const int DATA_SIZE = 1;
 
@@ -28,7 +27,11 @@ public:
 	size_t GetCount() const { return m_nDataUsed; };
 	void Clear()
 	{
-		SAFE_DELETE_ARRAY(m_pData);
+		if (m_pData)
+		{
+			delete[] m_pData;
+			m_pData = NULL;
+		}
 
 		m_nDataSize = DATA_SIZE;
 		m_nDataUsed = 0;

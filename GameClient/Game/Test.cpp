@@ -79,7 +79,7 @@ void Test::TestLight()
 	rsDirectX.m_pd3dDevice->SetMaterial(&pMaterial->GetMaterial());
 
 	//´´½¨µÆ¹â
-	args.
+	args.Clear();
 	LightManager::GetSingleton()->CreateLight(args);
 
 	return;
