@@ -2,14 +2,15 @@
 
 #include "Light.h"
 #include "Singleton.h"
+#include "..\Manager_Define.h"
 
-typedef std::hash_map<std::string, Light*> LightMap;
+typedef std::map<std::string, Light*> LightMap;
 
 class LightManager : public Singleton<LightManager>
 {
 public:
-	LightManager(void);
-	~LightManager(void);
+	LightManager(void){ };
+	~LightManager(void){ };
 
 public:
 	CREATE_CLASS(Light);

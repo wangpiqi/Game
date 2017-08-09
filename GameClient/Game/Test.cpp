@@ -15,6 +15,7 @@
 #include "EntityA.h"
 #include "EntityB.h"
 #include "RenderSystem\MaterialManager.h"
+#include "RenderSystem\LightManager.h"
 
 Test::Test(void)
 {
@@ -80,7 +81,7 @@ void Test::TestLight()
 
 	//´´½¨µÆ¹â
 	args.Clear();
-	LightManager::GetSingleton()->CreateLight(args);
+	LightManager::GetSingleton()->CreateLight("", args);
 
 	return;
 }
