@@ -81,6 +81,8 @@ void Test::TestLight()
 
 	//´´½¨µÆ¹â
 	args.Clear();
+	strDiffuse = "1.0f, 1.0f, 1.0f, 1.0f";
+	args << LIGHT_TYPE_DIRECTIONAL << strDiffuse.c_str();
 	LightManager::GetSingleton()->CreateLight("", args);
 
 	return;

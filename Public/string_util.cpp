@@ -22,8 +22,8 @@ void StringUtil::SplitString(const char* szStr, const char* szSplit, output VarL
 
 	while((nPos = strResult.find(szSplit)) != string::npos)
 	{
+		result << strResult.substr(0, nPos).c_str();
 		strResult = strResult.substr(nPos + strlen(szSplit), -1);
-		result << strResult.c_str();
 	}
 
 	result << strResult.c_str();

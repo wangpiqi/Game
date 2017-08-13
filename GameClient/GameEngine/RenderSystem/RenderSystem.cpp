@@ -164,6 +164,7 @@ void RenderSystem::SetRenderState()
 {
 	HRESULT hr = m_RenderStructDirectX.m_pd3dDevice->SetRenderState( D3DRS_CULLMODE, D3DCULL_NONE );
 	hr = m_RenderStructDirectX.m_pd3dDevice->SetRenderState( D3DRS_ZENABLE, TRUE );
+	hr = m_RenderStructDirectX.m_pd3dDevice->SetRenderState( D3DRS_LIGHTING, TRUE );
 
 	return;
 }
