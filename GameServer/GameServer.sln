@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameServer", "GameServer.vcproj", "{AC80C237-B730-4BD0-B44E-B7835A71B6C0}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameServerEngine", "GameServerEngine\GameServerEngine.vcproj", "{3F5E9721-9E7C-4F97-887A-D6F44499697F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -13,6 +15,10 @@ Global
 		{AC80C237-B730-4BD0-B44E-B7835A71B6C0}.Debug|Win32.Build.0 = Debug|Win32
 		{AC80C237-B730-4BD0-B44E-B7835A71B6C0}.Release|Win32.ActiveCfg = Release|Win32
 		{AC80C237-B730-4BD0-B44E-B7835A71B6C0}.Release|Win32.Build.0 = Release|Win32
+		{3F5E9721-9E7C-4F97-887A-D6F44499697F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3F5E9721-9E7C-4F97-887A-D6F44499697F}.Debug|Win32.Build.0 = Debug|Win32
+		{3F5E9721-9E7C-4F97-887A-D6F44499697F}.Release|Win32.ActiveCfg = Release|Win32
+		{3F5E9721-9E7C-4F97-887A-D6F44499697F}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

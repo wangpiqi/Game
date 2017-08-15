@@ -19,7 +19,7 @@
 		<Configuration
 			Name="Debug|Win32"
 			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
-			IntermediateDirectory="$(ConfigurationName)"
+			IntermediateDirectory="..\..\Rubbish\GameServer\$(ConfigurationName)"
 			ConfigurationType="2"
 			CharacterSet="1"
 			>
@@ -165,6 +165,82 @@
 	<References>
 	</References>
 	<Files>
+		<Filter
+			Name="Public"
+			>
+			<File
+				RelativePath="..\..\Public\FastDelegate.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Public\macro_util.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Public\Singleton.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Public\string_util.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Public\string_util.h"
+				>
+			</File>
+			<Filter
+				Name="Variant"
+				>
+				<File
+					RelativePath="..\..\Public\Variant\Variant.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\Public\Variant\Variant_Define.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\Public\Variant\VarList.cpp"
+					>
+				</File>
+				<File
+					RelativePath="..\..\Public\Variant\VarList.h"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="Event"
+				>
+				<File
+					RelativePath="..\..\Public\Event\Event.cpp"
+					>
+				</File>
+				<File
+					RelativePath="..\..\Public\Event\Event.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\Public\Event\Event_Define.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\Public\Event\EventManager.cpp"
+					>
+				</File>
+				<File
+					RelativePath="..\..\Public\Event\EventManager.h"
+					>
+				</File>
+			</Filter>
+		</Filter>
+		<File
+			RelativePath=".\GameServerEngine.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\GameServerEngine.h"
+			>
+		</File>
 	</Files>
 	<Globals>
 	</Globals>

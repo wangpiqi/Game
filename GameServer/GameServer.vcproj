@@ -165,6 +165,18 @@
 	<References>
 	</References>
 	<Files>
+		<File
+			RelativePath=".\GameServer.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\GameServer.h"
+			>
+		</File>
+		<File
+			RelativePath=".\main.cpp"
+			>
+		</File>
 	</Files>
 	<Globals>
 	</Globals>
