@@ -2,21 +2,72 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Public">
-      <UniqueIdentifier>{0271f4b2-9b55-43af-87aa-436ec61ce8ce}</UniqueIdentifier>
+      <UniqueIdentifier>{032f7b94-9786-4993-ab0b-3fb9df8658c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Public\Variant">
+      <UniqueIdentifier>{95980fd0-36f1-4fec-b192-9a1ce5c323b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Public\Event">
+      <UniqueIdentifier>{cf6c9a5d-5007-4dd6-b44d-2aa23f986223}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Public\utils">
+      <UniqueIdentifier>{752f2cc7-4e22-4b07-8dbc-a15c44ed18eb}</UniqueIdentifier>
     </Filter>
     <Filter Include="Entity">
-      <UniqueIdentifier>{51cf85c9-3a01-4ec6-9402-94428f06dba1}</UniqueIdentifier>
+      <UniqueIdentifier>{9bcd4ca6-92a2-48af-a347-324e8f8ee6d0}</UniqueIdentifier>
     </Filter>
     <Filter Include="RenderSystem">
-      <UniqueIdentifier>{94f75b19-73fc-4178-8f5c-f03c9c954dc5}</UniqueIdentifier>
+      <UniqueIdentifier>{02395f45-bbc6-463b-9fdb-cabf3226e59d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RenderSystem\Material">
+      <UniqueIdentifier>{fb71db75-f05f-4cd4-a3dd-3d9cf573f021}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RenderSystem\Light">
+      <UniqueIdentifier>{32f33a63-e021-45fb-bb57-0b66bc044ef0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object">
+      <UniqueIdentifier>{14fc0ca5-9df9-4ed5-aa5e-fdaf3ee8b01a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Define">
+      <UniqueIdentifier>{557f5be4-a13b-4631-8740-5246b6b3aba7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DXUT">
+      <UniqueIdentifier>{cbb40529-19b4-4e94-9371-4ec1d20082c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DXUT\Core">
+      <UniqueIdentifier>{83fb7fb6-4def-4102-8197-c996cc546a3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DXUT\Optional">
+      <UniqueIdentifier>{60257da4-5878-47f6-9f4f-b93e0be307a9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Public\macro_util.h">
+    <ClInclude Include="..\..\Public\Singleton.h">
       <Filter>Public</Filter>
     </ClInclude>
-    <ClInclude Include="..\Public\Singleton.h">
-      <Filter>Public</Filter>
+    <ClInclude Include="..\..\Public\Variant\Variant.h">
+      <Filter>Public\Variant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Public\Variant\Variant_Define.h">
+      <Filter>Public\Variant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Public\Variant\VarList.h">
+      <Filter>Public\Variant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Public\Event\Event.h">
+      <Filter>Public\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Public\Event\EventManager.h">
+      <Filter>Public\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Public\FastDelegate.h">
+      <Filter>Public\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Public\macro_util.h">
+      <Filter>Public\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Public\string_util.h">
+      <Filter>Public\utils</Filter>
     </ClInclude>
     <ClInclude Include="EntityManager.h">
       <Filter>Entity</Filter>
@@ -24,20 +75,170 @@
     <ClInclude Include="IEntity.h">
       <Filter>Entity</Filter>
     </ClInclude>
-    <ClInclude Include="RenderSystem.h">
+    <ClInclude Include="RenderSystem\RenderSystem.h">
       <Filter>RenderSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderSystem\Vertex.h">
+      <Filter>RenderSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderSystem\Material.h">
+      <Filter>RenderSystem\Material</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderSystem\MaterialManager.h">
+      <Filter>RenderSystem\Material</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderSystem\Light.h">
+      <Filter>RenderSystem\Light</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderSystem\LightManager.h">
+      <Filter>RenderSystem\Light</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectManager.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Public\Event\Event_Define.h">
+      <Filter>Define</Filter>
+    </ClInclude>
+    <ClInclude Include="GameEngine_Define.h">
+      <Filter>Define</Filter>
+    </ClInclude>
+    <ClInclude Include="Manager_Define.h">
+      <Filter>Define</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderSystem_Define.h">
+      <Filter>Define</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Core\DXUT.h">
+      <Filter>DXUT\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Core\DXUTenum.h">
+      <Filter>DXUT\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Core\DXUTmisc.h">
+      <Filter>DXUT\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\DXUTcamera.h">
+      <Filter>DXUT\Optional</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\DXUTgui.h">
+      <Filter>DXUT\Optional</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\DXUTguiIME.h">
+      <Filter>DXUT\Optional</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\DXUTLockFreePipe.h">
+      <Filter>DXUT\Optional</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\DXUTres.h">
+      <Filter>DXUT\Optional</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\DXUTsettingsdlg.h">
+      <Filter>DXUT\Optional</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\DXUTShapes.h">
+      <Filter>DXUT\Optional</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\ImeUi.h">
+      <Filter>DXUT\Optional</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\SDKmesh.h">
+      <Filter>DXUT\Optional</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\SDKmisc.h">
+      <Filter>DXUT\Optional</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\SDKsound.h">
+      <Filter>DXUT\Optional</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\SDKwavefile.h">
+      <Filter>DXUT\Optional</Filter>
     </ClInclude>
     <ClInclude Include="GameEngine.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Public\Variant\VarList.cpp">
+      <Filter>Public\Variant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Public\Event\Event.cpp">
+      <Filter>Public\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Public\Event\EventManager.cpp">
+      <Filter>Public\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Public\string_util.cpp">
+      <Filter>Public\utils</Filter>
+    </ClCompile>
     <ClCompile Include="EntityManager.cpp">
       <Filter>Entity</Filter>
     </ClCompile>
     <ClCompile Include="IEntity.cpp">
       <Filter>Entity</Filter>
     </ClCompile>
-    <ClCompile Include="RenderSystem.cpp">
+    <ClCompile Include="RenderSystem\RenderSystem.cpp">
       <Filter>RenderSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderSystem\Material.cpp">
+      <Filter>RenderSystem\Material</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderSystem\MaterialManager.cpp">
+      <Filter>RenderSystem\Material</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderSystem\Light.cpp">
+      <Filter>RenderSystem\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderSystem\LightManager.cpp">
+      <Filter>RenderSystem\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectManager.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Core\DXUT.cpp">
+      <Filter>DXUT\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Core\DXUTenum.cpp">
+      <Filter>DXUT\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Core\DXUTmisc.cpp">
+      <Filter>DXUT\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\DXUTcamera.cpp">
+      <Filter>DXUT\Optional</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\DXUTgui.cpp">
+      <Filter>DXUT\Optional</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\DXUTguiIME.cpp">
+      <Filter>DXUT\Optional</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\DXUTres.cpp">
+      <Filter>DXUT\Optional</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\DXUTsettingsdlg.cpp">
+      <Filter>DXUT\Optional</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\DXUTShapes.cpp">
+      <Filter>DXUT\Optional</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\ImeUi.cpp">
+      <Filter>DXUT\Optional</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\SDKmesh.cpp">
+      <Filter>DXUT\Optional</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\SDKmisc.cpp">
+      <Filter>DXUT\Optional</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\SDKsound.cpp">
+      <Filter>DXUT\Optional</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\SDKwavefile.cpp">
+      <Filter>DXUT\Optional</Filter>
     </ClCompile>
     <ClCompile Include="GameEngine.cpp" />
   </ItemGroup>
